@@ -224,6 +224,10 @@ function loadDashboardData() {
   return { dashboardData, excelFile };
 }
 
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok' });
+});
+
 app.get('/api/dashboard', (req, res) => {
   try {
     console.log('[API] GET /api/dashboard');
